@@ -6,20 +6,21 @@ jQuery(document).ready(function ($) {
      menu_toggle.on("click", function () {
           var $this = $(this);
 
-          $this.toggleClass("close");
-          $("#sidebar-menu, .menu-nav, .sidebar-nav-link").toggleClass("show");
+          // $this.toggleClass("close");
+          $("#sidebar-menu, .nav-wrapper, .sidebar-nav-link").toggleClass("show");
      });
 
      // Toggle nav menu on item click and smooth scrolling
-     $(".menu-nav-item a").on("click", function () {
+     $(".sidebar-nav-link a").on("click", function () {
           var $this = $(this),
                href = $this.attr("href");
 
           // Toggle nav menu
           menu_toggle.removeClass("close");
-          $this.parents(".sidebar-nav-link, .menu-nav, #sidebar-menu").removeClass("show");
+          $this.parents(".sidebar-nav-link, .nav-wrapper, #sidebar-menu").removeClass("show");
 
-          // Smooth scrolling
+          // Smooth scrolling 
+          /*
           $root.animate(
                {
                     scrollTop: $(href).offset().top - 100
@@ -29,6 +30,7 @@ jQuery(document).ready(function ($) {
                     window.location.hash = href;
                }
           );
+          */
           return false;
      })
 });
