@@ -45,6 +45,16 @@ a {
 header {
      min-height: 80px;
 }
+@media only screen and (max-width: 1000px) {
+     header {
+          min-height: 60px;
+          height: auto;
+     }
+}
+
+header.darken-header {
+     background-color: rgba(0, 0, 0, .1);
+}
 
 p {
      font-size: 18px;
@@ -124,7 +134,6 @@ p {
      right: 0;
      flex-direction: row;
      justify-content: space-between;
-     background-color: rgba(255, 255, 255, .9);
      padding: 32px 90px 0 90px;
      width: 100%;
      box-sizing: border-box;

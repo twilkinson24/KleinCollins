@@ -10,6 +10,7 @@ jQuery(document).ready(function ($) {
           $("#sidebar-menu, .nav-wrapper, main").toggleClass("show");
           // Darken background 
           $('.content-wrap').toggleClass("darken-background");
+          $('header').toggleClass("darken-header");
      });
 
      // Toggle nav menu on item click and smooth scrolling
@@ -23,6 +24,7 @@ jQuery(document).ready(function ($) {
 
           // Remove darkened background 
           $('.content-wrap').removeClass("darken-background");
+          $('header').removeClass("darken-header");
 
           // Smooth scrolling 
 
