@@ -7,7 +7,9 @@ jQuery(document).ready(function ($) {
           var $this = $(this);
 
           // $this.toggleClass("close");
-          $("#sidebar-menu, .nav-wrapper, .sidebar-nav-link").toggleClass("show");
+          $("#sidebar-menu, .nav-wrapper, main").toggleClass("show");
+          // Darken background 
+          $('.content-wrap').toggleClass("darken-background");
      });
 
      // Toggle nav menu on item click and smooth scrolling
@@ -17,7 +19,10 @@ jQuery(document).ready(function ($) {
 
           // Toggle nav menu
           menu_toggle.removeClass("close");
-          $this.parents(".sidebar-nav-link, .nav-wrapper, #sidebar-menu").removeClass("show");
+          $this.parents(".nav-wrapper, main, #sidebar-menu").removeClass("show");
+
+          // Remove darkened background 
+          $('.content-wrap').removeClass("darken-background");
 
           // Smooth scrolling 
           /*
