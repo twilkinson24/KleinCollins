@@ -25,7 +25,7 @@ jQuery(document).ready(function ($) {
           $('.content-wrap').removeClass("darken-background");
 
           // Smooth scrolling 
-          /*
+
           $root.animate(
                {
                     scrollTop: $(href).offset().top - 100
@@ -35,7 +35,39 @@ jQuery(document).ready(function ($) {
                     window.location.hash = href;
                }
           );
-          */
+
           return false;
      })
+
+
+     // BACK TO TOP BUTTON
+     var goTopBtn = document.querySelector('.back-to-top');
+
+     'use strict';
+     function trackScroll() {
+          var scrolled = window.pageYOffset;
+          var coords = document.documentElement.clientHeight - 500;
+
+          if (scrolled > coords) {
+               goTopBtn.classList.add('back-to-top-show');
+          }
+          if (scrolled < coords) {
+               goTopBtn.classList.remove('back-to-top-show');
+          }
+     }
+
+     function scrollin() {
+          $('html, body').animate({ scrollTop: 0 }, '1000');
+     }
+
+     function backToTop() {
+          if (window.pageYOffset > 0) {
+               window.scrollBy(100, -80);
+               setTimeout(scrollin, 0);
+          }
+     }
+
+     window.addEventListener('scroll', trackScroll);
+     goTopBtn.addEventListener('click', backToTop);
+     /* end begin Back to Top button  */
 });
