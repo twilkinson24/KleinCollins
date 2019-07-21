@@ -70,4 +70,23 @@ jQuery(document).ready(function ($) {
      window.addEventListener('scroll', trackScroll);
      goTopBtn.addEventListener('click', backToTop);
      /* end begin Back to Top button  */
+
+
+
+     // Hide Nav Menu on scroll down
+     $(window).scroll(
+          {
+               previousTop: 0
+          },
+          function () {
+               var currentTop = $(window).scrollTop();
+               if (currentTop < this.previousTop) {
+                    $(".sidebar em").text("Up"); /* optional for demo */
+                    $(".nav-wrapper").show();
+               } else {
+                    $(".sidebar em").text("Down");
+                    $(".nav-wrapper").hide();
+               }
+               this.previousTop = currentTop;
+          });
 });
