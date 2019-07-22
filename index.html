@@ -26,9 +26,9 @@
                <h3 class="tagline">We're raising money for our 2018 marching band season.<br>
                     Will you please help us?
                </h3>
-               <div class="action-btns">
-                    <button class="btn btn-large btn-blue">Donate Now</button>
-                    <button class="btn btn-large btn-gray-border">Learn More</button>
+               <div class="action-btns text-center">
+                    <a class="btn btn-large btn-blue">Donate Now</a>
+                    <a class="btn btn-large btn-gray-border">Learn More</a>
                </div>
           </div>
      </header>
@@ -48,7 +48,7 @@
                     <div class="progress-bar"></div>
                     <p style="text-align:right;">Number of donors: <span class="bold">430</span></p>
                </section>
-               <section class="fundraiser-countdown">
+               <section class="fundraiser-countdown text-center">
                     <h3>Our fundraiser ends in</h3>
                     <button class="btn btn-large btn-blue">Donate Now</button>
                </section>
@@ -56,6 +56,12 @@
           <!-- Your Support Video Section -->
           <section class="video text-center">
                <h2 class="section-title">Your support makes a big difference.</h2>
+               <div id="video">
+                    <p>Placeholder for video Lorem, ipsum. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                         Ipsa cum iusto odit quis suscipit ipsum saepe! Dolorum deleniti aspernatur temporibus nihil
+                         neque reprehenderit sit.</p>
+               </div>
+               <button class="btn btn-large btn-blue">Help Support Our Program</button>
           </section>
           <!-- Message Section -->
           <section class="message">
@@ -106,12 +112,51 @@
                     <p>
                          <legend class="bold">Student Designation</legend>
                     </p>
-                    <label>
-                         Enter the name of the student you would like to donate in support of (optional)
-                    </label>
-                    <input type="text" placeholder="Student name (first & last)">
-                    <textarea name="" id="" cols="30" rows="10"
-                         placeholder="Leave a public message of encouragement (optional)"></textarea>
+                    <form action="">
+                         <label for="studentname">
+                              Enter the name of the student you would like to donate in support of (optional)
+                         </label>
+                         <div class="form-field">
+                              <input type="text" name="studentname" placeholder="Student name (first & last)">
+                         </div>
+                         <div class="form-field">
+                              <textarea name="encouragement" id="" cols="30" rows="10"
+                                   placeholder="Leave a public message of encouragement (optional)"></textarea>
+                         </div>
+                         <p>
+                              <legend class="bold">Donor Info</legend>
+                         </p>
+                         <div class="form-field">
+                              <input type="text" name="firstname" placeholder="First Name">
+                              <input type="text" name="lastname" id="" placeholder="Last Name">
+                         </div>
+                         <div class="form-field">
+                              <input type="email" name="email" placeholder="Email Address">
+                         </div>
+                         <p>
+                              <legend class="bold">Credit Card Info</legend>
+                         </p>
+                         <label>
+                              This is a secure SSL encrypted payment.
+                         </label>
+                         <div class="form-field">
+                              <input type="text" placeholder=" THIS NEEDS WORK ">
+                         </div>
+                         <div class="form-field">
+                              <input type="text" placeholder="Cardholder Name">
+                         </div>
+                         <div class="form-field">
+                              <input type="checkbox" name="transactionFee" value="transaction-fee">
+                              <span>
+                                   <label for="transactionFee" class="bold" id="transaction-fee">Check the box if you
+                                        are willing to
+                                        cover the transaction
+                                        fee of $3.30 for this donation.</label>
+                              </span>
+                         </div>
+                         <p>Donation Total THING</p>
+                         <input type="submit" class="btn btn-blue" value="Donate Now" id="submit-donation-btn">
+                    </form>
                </div>
           </section>
 
