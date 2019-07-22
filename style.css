@@ -335,7 +335,6 @@ ul.sidebar-menu-nav {
      opacity: 1;
      transition: all 600ms ease-out;
 }
-
 /* End of Navigation */
 
 main {
@@ -354,7 +353,6 @@ main ul {
      padding-bottom: 30px;
      padding-left: 2rem;
 }
-
 
 /* back to top arrow button */
 .back-to-top {
@@ -377,7 +375,6 @@ main ul {
      z-index: 9999;
 }
 
-
 .back-to-top:hover {
      color: #3452ff;
      background: #3452ff!important;
@@ -386,3 +383,6 @@ main ul {
 .back-to-top-show {
      display: block;
 }
+
+
+/* TESTING */
