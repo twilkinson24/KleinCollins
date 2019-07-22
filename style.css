@@ -25,6 +25,7 @@ h2 {
      font-weight: 300;
      font-size: 36px;
      line-height: 46px;
+     padding-bottom: 30px;
 }
 
 h3 {
@@ -46,6 +47,11 @@ img {
 
 a {
      text-decoration: none;
+     color: #3452ff;
+}
+
+a:hover {
+     color: #000;
 }
 
 header.nav {
@@ -68,6 +74,10 @@ p {
      font-weight: 300;
      line-height: 30px;
      padding-bottom: 30px;
+}
+
+section {
+     padding: 5% 9%;
 }
 
 /* Global Styles */
@@ -121,6 +131,11 @@ p {
      font-weight: bold;
 }
 
+.text-large {
+     font-size: 46px;
+     line-height: 48px;
+}
+
 .text-center {
      text-align: center;
 }
@@ -139,6 +154,7 @@ button.btn:focus {
      font-family: "Roboto", Arial, Helvetica, sans-serif;
      color: #fff;
      cursor: pointer;
+     font-weight: bold;
 }
 
 .btn-gray-border {
@@ -160,11 +176,15 @@ button.btn:focus {
 
 .btn-large {
      font-size: 18px;
-     font-weight: bold;
      line-height: 20px;
      padding: 24px 40px;
 }
 
+.btn-small {
+     font-size: 12px;
+     padding: 10px 20px;
+     text-transform: capitalize;
+}
 
 /* End Global Styles */
 .content-wrap {
@@ -404,13 +424,13 @@ main.main-terms ul {
 /* Klein Collins Page */
 header#welcome-banner { 
      background-color: #fff;
-     background-image: linear-gradient(to bottom, rgba(51, 51, 51, .9), rgba(68, 68, 68, .9), rgba(51, 51, 51, .9)), url('./img/marching-band.jpg');
+     background-image: linear-gradient(to bottom, rgba(29, 28, 28, 0.9), rgba(29, 28, 28, 0.9)), url('./img/marching-band.jpg');
      color: #fff;
-     padding: 190px 0;
+     padding: 12.5% 0;
 }
 @media only screen and (max-width: 1300px) {
      header#welcome-banner { 
-          padding: 153px 0;
+          padding: 10% 0;
      }
 }
 
@@ -438,23 +458,46 @@ header#welcome-banner {
      }
 }
 
-section {
-     padding: 2rem 0;
-}
-
 #learn-more {
      flex-direction: row;
 }
 
 #learn-more .about-fundraiser {
      flex: 0 0 67%;
-     padding: 0 7%;
+     padding: 5% 9%;
+     background-color: #f9f9f9;
+}
+
+.progress-bar {
+     display: block;
+     height: 21px;
+     width: 100%;
+     background-color: #3452ff;
+     border-radius: 100px;
 }
 
 #learn-more .fundraiser-countdown {
      background-color: #eeeeee;
      flex: 0 0 33%;
+     padding: 5% 9%;
 }
+
+/* Message Section */
+section.message {
+     background-color: #eeeeee;
+     flex-direction: row;
+     width: 100%;
+}
+
+.message .rounded-img {
+     flex: 0 0 15%;
+}
+
+/* Donate Section */
+legend {
+     border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
 
 /* back to top arrow button */
 .back-to-top {
