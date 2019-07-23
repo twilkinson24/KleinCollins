@@ -17,7 +17,7 @@
      <link rel="shortcut icon" href="./img/logoicon.png" type="image/x-icon">
 </head>
 
-<body>
+<body id="#klein-collins">
      <header class="text-center" id="welcome-banner">
           <div class="welcome-content-wrap">
                <h1>Klein Collins High School<br>
@@ -51,20 +51,20 @@
                <section class="fundraiser-countdown text-center">
                     <h3 class="section-title" style="font-size: 26px;">Our fundraiser ends in</h3>
                     <div class="flex countdown-timer">
-                         <div class="timer-item" id="days">
-                              07<br>
+                         <div class="timer-item">
+                              <p id="timer-days"></p>
                               <span class="timer-label">days</span>
                          </div>
-                         <div class="timer-item" id="hours">
-                              12<br>
+                         <div class="timer-item">
+                              <p id="timer-hours"></p>
                               <span class="timer-label">hours</span>
                          </div>
-                         <div class="timer-item" id="minutes">
-                              57<br>
+                         <div class="timer-item">
+                              <p id="timer-minutes"></p>
                               <span class="timer-label">minutes</span>
                          </div>
-                         <div class="timer-item" id="seconds">
-                              22<br>
+                         <div class="timer-item">
+                              <p id="timer-seconds"></p>
                               <span class="timer-label">seconds</span>
                          </div>
                     </div>
@@ -146,11 +146,17 @@
                               $20,000 raised</p>
                          <div class="progress-bar"></div>
                          <div class="donation-items">
-                              <p>Placeholder for the JS section</p>
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam delectus quibusdam
-                                   velit ad
-                                   quasi asperiores facilis repellat unde. Molestiae ducimus quidem deleniti neque non
-                                   suscipit iure odio earum reiciendis rem.</p>
+                              <input type="text" id="donation-display">
+                              <ul class="flex" id="donation-items">
+                                   <li>$5 - one pair of gloves</li>
+                                   <li>$10 - one drill learning software license</li>
+                                   <li>$25 - one custom color guard flag</li>
+                                   <li>$50 - drinks for one game or marching contest</li>
+                                   <li>$100 - rental of one equipment truck for contest</li>
+                                   <li>$200 - clinician visit</li>
+                                   <li>$500 - combined costs of a game and a contest</li>
+                                   <li>Give a Custom Amount</li>
+                              </ul>
                          </div>
                          <p>
                               <legend class="bold">Student Designation</legend>

@@ -570,11 +570,21 @@ header#welcome-banner {
      flex: 0 0 33%;
      padding: 5% 2%;
 }
+@media only screen and (max-width: 1189px) {
+     #learn-more section.fundraiser-countdown {
+          padding: 5% 1%;
+     }
+}
+@media only screen and (max-width: 1089px) {
+     #learn-more section.fundraiser-countdown {
+          padding: 5% 0;
+     }
+}
 @media only screen and (max-width: 1000px) {
      #learn-more section.fundraiser-countdown {
           background-color: #eeeeee;
           flex: 0 0 33%;
-          padding: 13% 4%;
+          padding: 13% 6%;
      }
 }
 
@@ -595,22 +605,22 @@ header#welcome-banner {
      }
 }
 
-.fundraiser-countdown .timer-item {
+.fundraiser-countdown .timer-item p {
      font-size: 58px;
      font-weight: 500;
 }
 @media only screen and (max-width: 500px) {
-     .timer-item {
+     .timer-item p {
           padding: 20px 30px;
      }
 }
 @media only screen and (max-width: 400px) {
-     .timer-item {
+    .timer-item p {
           padding: 15px 20px;
      }
 }
 @media only screen and (max-width: 330px) {
-     .timer-item {
+     .timer-item p {
           padding: 15px 10px;
      }
 }
@@ -658,15 +668,14 @@ section.message {
 .social-icons {
      max-width: 95%;
      flex-direction: row;
-     justify-content: space-between;
+     justify-content: flex-start;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 768px) {
      .social-icons {
           max-width: 100%;
-           width: 100%;
+          width: 100%;
      }
 }
-
 
 .social-icons a.social-icon {
      display: block;
@@ -702,10 +711,27 @@ a.social-icon:hover {
      width: 80%;
      margin: 0 auto;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 768px) {
      .donate-wrap {
           width: 100%;
      }
+}
+
+ul#donation-items {
+     flex-wrap: wrap;
+     list-style-type: none;
+     padding-bottom: 30px;
+}
+
+#donation-items li {
+     background-color: rgb(237, 237, 237);
+     border-radius: 100px;
+     border: 1px solid rgb(204, 204, 204);
+     color: #333;
+     font-size: 18px;
+     font-weight: 500;
+     padding: 6px 15px;
+     margin: 0 5px 5px 0;
 }
 
 legend {
