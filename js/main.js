@@ -169,41 +169,50 @@ jQuery(document).ready(function ($) {
 
      const donationBtns = [fiveBtn, tenBtn, twentyFiveBtn, fiftyBtn, oneHundredBtn, twoHundredBtn, fiveHundredBtn, customAmtBtn];
 
+     function setTotal(total) {
+          donationDisplay.value = total;
+          donationTotal.value = total;
+     }
+
+     function enterCustomAmt() {
+          donationDisplay.value = '';
+          donationDisplay.focus();
+     }
+
      for (let i = 0; i < donationBtns.length; i++) {
           donationBtns[i].addEventListener("click", function (e) {
-
-
                switch (donationBtns[i]) {
                     case fiveBtn:
                          console.log('5');// code block
+                         setTotal('5.00');
                          break;
                     case tenBtn:
                          console.log('10!');// code block
-                         // code block
+                         setTotal('10.00');
                          break;
                     case twentyFiveBtn:
                          console.log('25!');// code block
-                         // code block
+                         setTotal('25.00');
                          break;
                     case fiftyBtn:
                          console.log('50!');// code block
-                         // code block
+                         setTotal('50.00');
                          break;
                     case oneHundredBtn:
                          console.log('100!');// code block
-                         // code block
+                         setTotal('100.00');
                          break;
                     case twoHundredBtn:
                          console.log('200!');// code block
-                         // code block
+                         setTotal('200.00');
                          break;
                     case fiveHundredBtn:
                          console.log('500!');// code block
-                         // code block
+                         setTotal('500.00');
                          break;
                     case customAmtBtn:
                          console.log('custom yo');// code block
-                         // code block
+                         enterCustomAmt();
                          break;
                     default:
                          console.log('default');// code block
