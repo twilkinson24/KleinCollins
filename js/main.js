@@ -155,7 +155,9 @@ jQuery(document).ready(function ($) {
 
      // Donation Form Section
      const donationDisplay = document.getElementById('donation-display'),
-          donationTotal = document.getElementById('donation-total');
+          donationTotal = document.getElementById('donation-total'),
+          feeCheck = document.getElementById('fee-check'),
+          feeCheckBox = document.getElementById('transaction-fee');
 
 
      // Donation Options
@@ -180,6 +182,11 @@ jQuery(document).ready(function ($) {
           donationDisplay.focus();
      }
 
+     feeCheckBox.addEventListener("click", function () {
+          feeCheck.click();
+     });
+
+     // disable user from changing the donation total input near submit btn
      donationTotal.addEventListener("click", function (e) {
           donationTotal.blur();
      });
