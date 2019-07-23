@@ -596,6 +596,7 @@ header#welcome-banner {
 @media only screen and (max-width: 1000px) {
      .countdown-timer {
           padding: 0 25px 80px 25px;
+          justify-content: space-around;
      }
 }
 @media only screen and (max-width: 500px) {
@@ -628,6 +629,17 @@ header#welcome-banner {
      font-size: 20px;
      font-weight: normal;
      color: rgb(145, 145, 145);
+}
+
+/* Video Section */
+#video {
+     max-width: 80%;
+     margin: 0 auto;
+}
+@media only screen and (max-width: 768px) {
+     #video {
+          max-width: 100%;
+     }
 }
 
 /* Message Section */
@@ -717,6 +729,25 @@ a.social-icon:hover {
      }
 }
 
+.give-total {
+    background: rgb(237, 237, 237);
+    width: 155px;
+    position: relative;
+
+}
+
+span#dollar-sign {
+     position: absolute;
+     top: 0;
+     left: 0;
+     background-color: rgb(237, 237, 237);
+     padding: 0px 15px;
+     color: #111;
+     border: 1px solid #ccc;
+}
+
+
+
 ul#donation-items {
      flex-wrap: wrap;
      list-style-type: none;
@@ -760,6 +791,17 @@ label#transaction-fee {
      .flex.name .form-field {
           flex: 0 0 100%;
      }
+}
+
+#donation-display {
+     display: block; 
+     color: #444;
+     height: 10px;
+     min-height: 10px;
+     max-height: 10px;
+     width: 155px;
+     padding: 15px;
+     padding-left: 50px;
 }
 
 input[type="text"],
