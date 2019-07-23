@@ -78,13 +78,14 @@ p {
 }
 
 section {
-     padding: 5% 9%;
+     padding: 7% 0;
 }
 
 /* Global Styles */
 .section-title {
      font-size: 34px;
      line-height: 44px;
+     padding-bottom: 30px;
 }
 @media only screen and (max-width: 1000px) {
      .section-title {
@@ -514,12 +515,29 @@ header#welcome-banner {
      width: 100%;
      background-color: #3452ff;
      border-radius: 100px;
+     margin: 15px 0;
 }
 
-#learn-more .fundraiser-countdown {
+#learn-more section.fundraiser-countdown {
      background-color: #eeeeee;
      flex: 0 0 33%;
-     padding: 5% 9%;
+     padding: 5% 2%;
+}
+
+.countdown-timer {
+     flex-direction: row;
+     justify-content: space-between;
+     padding: 0 20px 30px 20px;
+}
+
+.fundraiser-countdown .timer-item {
+     font-size: 58px;
+     font-weight: 500;
+}
+.timer-item .timer-label {
+     font-size: 20px;
+     font-weight: normal;
+     color: rgb(145, 145, 145);
 }
 
 /* Message Section */
@@ -531,38 +549,58 @@ section.message {
 
 .message .message-wrap {
      flex-direction: row;
+     justify-content: space-between;
 }
 @media only screen and (max-width: 1000px) {
      .message .message-wrap {
           flex-direction: column;
      }
 }
+
+.message .rounded-img {
+     flex: 0 0 20%;
+}
+@media only screen and (max-width: 1000px) {
+     .rounded-img img {
+          max-width: 200px;
+    }
+}
+
+.message .message-content {
+     flex: 0 0 75%;
+     padding: 0 10px;
+}
+
 .message .social-icons {
      flex-direction: row;
 }
 
-.message .rounded-img {
-     flex: 0 0 15%;
-}
-
 .social-icons {
-     max-width: 75%;
+     max-width: 95%;
      flex-direction: row;
      justify-content: flex-start;
 }
+@media only screen and (max-width: 1000px) {
+     .social-icons {
+          max-width: 100%;
+           width: 100%;
+     }
+}
+
 
 .social-icons a.social-icon {
+     display: block;
      min-width: 60px;
-     max-width: 65px;
-     height:40px;
-     width: auto;
+     width: 80px;
+     height: 40px;
      border-radius: 100px;
      background-color: blue;
-     display: flex;
-     justify-content: center;
-     flex-direction: column;
      text-align: center;
      margin: 0 5px;
+}
+
+.social-icon img {
+     width: 65%;
 }
 
 a.social-icon:hover {
@@ -576,7 +614,7 @@ a.social-icon:hover {
 
 /* Donate Section */
 .donate-wrap {
-     width: 85%;
+     width: 80%;
      margin: 0 auto;
 }
 @media only screen and (max-width: 1000px) {
