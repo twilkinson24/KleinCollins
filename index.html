@@ -49,7 +49,7 @@
                     <p style="text-align:right;">Number of donors: <span class="bold">430</span></p>
                </section>
                <section class="fundraiser-countdown text-center">
-                    <h3>Our fundraiser ends in</h3>
+                    <h3 class="section-title">Our fundraiser ends in</h3>
                     <button class="btn btn-large btn-blue">Donate Now</button>
                </section>
           </div>
@@ -65,7 +65,7 @@
           </section>
           <!-- Message Section -->
           <section class="message">
-               <div class="container flex">
+               <div class="container flex message-wrap">
                     <div class="rounded-img">
                          <img src="./img/kchs_chris.png" class="rounded-img" alt="Director Chris Rugila">
                     </div>
@@ -82,81 +82,103 @@
                               really making a long-term investment in our students lives.
                          </p>
                          <p style="font-size:22px;">Help spread the word about our fundraiser:</p>
+                         <div class="flex social-icons">
+                              <a href="#" class="social-icon">
+                                   <img src="https://platform-cdn.sharethis.com/img/email.svg">
+                              </a>
+                              <a href="#" class="social-icon">
+                                   <img src="https://platform-cdn.sharethis.com/img/facebook.svg">
+                              </a>
+                              <a href="#" class="social-icon">
+                                   <img src="https://platform-cdn.sharethis.com/img/messenger.svg">
+                              </a>
+                              <a href="#" class="social-icon">
+                                   <img src="https://platform-cdn.sharethis.com/img/twitter.svg">
+                              </a>
+                              <a href="#" class="social-icon">
+                                   <img src="https://platform-cdn.sharethis.com/img/pinterest.svg">
+                              </a>
+                         </div>
                     </div>
                </div>
           </section>
           <!-- Donate Section -->
           <section id="donate">
                <div class="container">
-                    <h2 class="section-title text-center">Will you please help?</h2>
-                    <p class="text-center">
-                         Your donations are 100% secure SSL encrypted and directly help our band program. This
-                         fundraiser
-                         supports Klein Collins High School and is powered by <a
-                              href="https://fundraisegenius.com/">Fundraise Genius</a>.
-                    </p>
-                    <p class="text-center">
-                         Have a question? <span>
-                              <a href="mailto:support@fundraisegenius.com" class="btn btn-blue btn-small">Send Us A
-                                   Message</a>
-                         </span>
-                    </p>
-                    <p><span class="text-large">$22,525.75</span> of $20,000 raised</p>
-                    <div class="progress-bar"></div>
-                    <div class="donation-items">
-                         <p>Placeholder for the JS section</p>
-                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam delectus quibusdam velit ad
-                              quasi asperiores facilis repellat unde. Molestiae ducimus quidem deleniti neque non
-                              suscipit iure odio earum reiciendis rem.</p>
-                    </div>
-                    <p>
-                         <legend class="bold">Student Designation</legend>
-                    </p>
-                    <form action="">
-                         <label for="studentname">
-                              Enter the name of the student you would like to donate in support of (optional)
-                         </label>
-                         <div class="form-field">
-                              <input type="text" name="studentname" placeholder="Student name (first & last)">
-                         </div>
-                         <div class="form-field">
-                              <textarea name="encouragement" id="" cols="30" rows="10"
-                                   placeholder="Leave a public message of encouragement (optional)"></textarea>
-                         </div>
-                         <p>
-                              <legend class="bold">Donor Info</legend>
+                    <div class="donate-wrap">
+                         <h2 class="section-title text-center">Will you please help?</h2>
+                         <p class="text-center">
+                              Your donations are 100% secure SSL encrypted and directly help our band program. This
+                              fundraiser
+                              supports Klein Collins High School and is powered by <a
+                                   href="https://fundraisegenius.com/">Fundraise Genius</a>.
                          </p>
-                         <div class="form-field">
-                              <input type="text" name="firstname" placeholder="First Name">
-                              <input type="text" name="lastname" id="" placeholder="Last Name">
-                         </div>
-                         <div class="form-field">
-                              <input type="email" name="email" placeholder="Email Address">
-                         </div>
-                         <p>
-                              <legend class="bold">Credit Card Info</legend>
-                         </p>
-                         <label>
-                              This is a secure SSL encrypted payment.
-                         </label>
-                         <div class="form-field">
-                              <input type="text" placeholder=" THIS NEEDS WORK ">
-                         </div>
-                         <div class="form-field">
-                              <input type="text" placeholder="Cardholder Name">
-                         </div>
-                         <div class="form-field">
-                              <input type="checkbox" name="transactionFee" value="transaction-fee">
-                              <span>
-                                   <label for="transactionFee" class="bold" id="transaction-fee">Check the box if you
-                                        are willing to
-                                        cover the transaction
-                                        fee of $3.30 for this donation.</label>
+                         <p class="text-center">
+                              Have a question? <span>
+                                   <a href="mailto:support@fundraisegenius.com" class="btn btn-blue btn-small">Send Us A
+                                        Message</a>
                               </span>
+                         </p>
+                         <p style="display:block;padding-bottom: 10px;"><span class="text-large">22,525.75</span> of
+                              $20,000 raised</p>
+                         <div class="progress-bar"></div>
+                         <div class="donation-items">
+                              <p>Placeholder for the JS section</p>
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam delectus quibusdam
+                                   velit ad
+                                   quasi asperiores facilis repellat unde. Molestiae ducimus quidem deleniti neque non
+                                   suscipit iure odio earum reiciendis rem.</p>
                          </div>
-                         <p>Donation Total THING</p>
-                         <input type="submit" class="btn btn-blue" value="Donate Now" id="submit-donation-btn">
-                    </form>
+                         <p>
+                              <legend class="bold">Student Designation</legend>
+                         </p>
+                         <form action="">
+                              <label for="studentname">
+                                   Enter the name of the student you would like to donate in support of (optional)
+                              </label>
+                              <div class="form-field">
+                                   <input type="text" name="studentname" placeholder="Student name (first & last)">
+                              </div>
+                              <div class="form-field">
+                                   <textarea name="encouragement" id="" cols="30" rows="10"
+                                        placeholder="Leave a public message of encouragement (optional)"></textarea>
+                              </div>
+                              <p>
+                                   <legend class="bold">Donor Info</legend>
+                              </p>
+                              <div class="form-field">
+                                   <input type="text" name="firstname" placeholder="First Name" required>
+                                   <input type="text" name="lastname" id="" placeholder="Last Name" required>
+                              </div>
+                              <div class="form-field">
+                                   <input type="email" name="email" placeholder="Email Address" required>
+                              </div>
+                              <p>
+                                   <legend class="bold">Credit Card Info</legend>
+                              </p>
+                              <label>
+                                   This is a secure SSL encrypted payment.
+                              </label>
+                              <div class="form-field">
+                                   <input type="text" placeholder=" THIS NEEDS WORK ">
+                              </div>
+                              <div class="form-field">
+                                   <input type="text" placeholder="Cardholder Name" required>
+                              </div>
+                              <div class="form-field">
+                                   <input type="checkbox" name="transactionFee" value="transaction-fee">
+                                   <span>
+                                        <label for="transactionFee" class="bold" id="transaction-fee">Check the box if
+                                             you
+                                             are willing to
+                                             cover the transaction
+                                             fee of $3.30 for this donation.</label>
+                                   </span>
+                              </div>
+                              <p>Donation Total THING</p>
+                              <input type="submit" class="btn btn-blue" value="Donate Now" id="submit-donation-btn">
+                         </form>
+                    </div>
                </div>
           </section>
 

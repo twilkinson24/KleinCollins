@@ -31,6 +31,7 @@ h2 {
 h3 {
      font-size: 22px;
      line-height: 34px;
+     font-weight: 300;
      margin-bottom: 8px;
 }
 
@@ -81,6 +82,16 @@ section {
 }
 
 /* Global Styles */
+.section-title {
+     font-size: 34px;
+     line-height: 44px;
+}
+@media only screen and (max-width: 1000px) {
+     .section-title {
+          font-size: 28px;
+          line-height: 37px;
+     }
+}
 .container {
      padding: 0 90px;
      max-width: 1425px;
@@ -428,11 +439,11 @@ header#welcome-banner {
      background-color: #fff;
      background-image: linear-gradient(to bottom, rgba(29, 28, 28, 0.9), rgba(29, 28, 28, 0.9)), url('./img/marching-band.jpg');
      color: #fff;
-     padding: 12.5% 0;
+     padding: 14% 0;
 }
 @media only screen and (max-width: 1300px) {
      header#welcome-banner { 
-          padding: 10% 0;
+          padding: 15% 0;
      }
 }
 
@@ -440,6 +451,13 @@ header#welcome-banner {
      font-size: 60px;
      line-height: 66px;
 }
+@media only screen and (max-width: 1000px) {
+     #welcome-banner h1 {
+          font-size: 42px;
+          line-height: 46px;
+     }
+}
+
 
 #welcome-banner .welcome-content-wrap {
      width: 65%;
@@ -460,6 +478,10 @@ header#welcome-banner {
      }
 }
 @media only screen and (max-width: 1000px) {
+     .tagline {
+          font-size: 24px;
+          line-height: 34px;
+     }
      .action-btns {
           text-align: center;
      }
@@ -507,20 +529,62 @@ section.message {
      width: 100%;
 }
 
-.message .flex {
+.message .message-wrap {
      flex-direction: row;
 }
 @media only screen and (max-width: 1000px) {
-     .message .flex {
+     .message .message-wrap {
           flex-direction: column;
      }
+}
+.message .social-icons {
+     flex-direction: row;
 }
 
 .message .rounded-img {
      flex: 0 0 15%;
 }
 
+.social-icons {
+     max-width: 75%;
+     flex-direction: row;
+     justify-content: flex-start;
+}
+
+.social-icons a.social-icon {
+     min-width: 60px;
+     max-width: 65px;
+     height:40px;
+     width: auto;
+     border-radius: 100px;
+     background-color: blue;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     text-align: center;
+     margin: 0 5px;
+}
+
+a.social-icon:hover {
+     transition:all .3s ease-in;
+     margin-top:-5px;
+}
+
+.social-icon img {
+     padding: 10px 15px;
+}
+
 /* Donate Section */
+.donate-wrap {
+     width: 85%;
+     margin: 0 auto;
+}
+@media only screen and (max-width: 1000px) {
+     .donate-wrap {
+          width: 100%;
+     }
+}
+
 legend {
      border-bottom: 1px solid rgba(0,0,0,.1);
 }
@@ -528,6 +592,19 @@ legend {
 label#transaction-fee {
      color: #3452ff;
      cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+     font-family: "Roboto", Arial, Helvetica, sans-serif;
+     font-size: 16px;
+     margin-bottom: 15px;
+     display: block;
+     width: 100%;
+     color: #333;
+     min-height: 50px;
+     border: 1px solid #ccc;
 }
 
 #submit-donation-btn {
