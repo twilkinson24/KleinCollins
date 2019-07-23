@@ -157,6 +157,7 @@ jQuery(document).ready(function ($) {
      const donationDisplay = document.getElementById('donation-display'),
           donationTotal = document.getElementById('donation-total');
 
+
      // Donation Options
      const fiveBtn = document.getElementById('5-usd'),
           tenBtn = document.getElementById('10-usd'),
@@ -178,6 +179,10 @@ jQuery(document).ready(function ($) {
           donationDisplay.value = '';
           donationDisplay.focus();
      }
+
+     donationTotal.addEventListener("click", function (e) {
+          donationTotal.blur();
+     });
 
      for (let i = 0; i < donationBtns.length; i++) {
           donationBtns[i].addEventListener("click", function (e) {
