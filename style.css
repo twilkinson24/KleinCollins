@@ -447,13 +447,26 @@ main.main-terms ul {
 /* Klein Collins Page */
 header#welcome-banner { 
      background-color: #fff;
-     background-image: linear-gradient(to bottom, rgba(29, 28, 28, 0.9), rgba(29, 28, 28, 0.9)), url('./img/marching-band.jpg');
+     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./img/kchs_hidden.png');
+     background-size: cover;
+     background-position: center center;
+     background-repeat: no-repeat;
      color: #fff;
      padding: 14% 0;
 }
 @media only screen and (max-width: 1300px) {
      header#welcome-banner { 
-          padding: 15% 0;
+          padding: 12% 0;
+     }
+}
+@media only screen and (max-width: 1000px) {
+     header#welcome-banner { 
+          padding: 15% 0 12% 0;
+     }
+}
+@media only screen and (max-width: 768px) {
+     header#welcome-banner { 
+          padding: 14% 0 11% 0;
      }
 }
 
@@ -478,7 +491,7 @@ header#welcome-banner {
 }
 @media only screen and (max-width: 768px) {
      #welcome-banner .welcome-content-wrap {
-          width: 80%;     }
+          width: 88%;     }
 }
 @media only screen and (max-width: 600px) {
      #welcome-banner .welcome-content-wrap {
@@ -496,7 +509,7 @@ header#welcome-banner {
      font-weight: 300;
      line-height: 42px;
      margin: 0;
-     padding: 0 0 40px 0;
+     padding: 0 0 20px 0;
 }
 @media only screen and (max-width: 1300px) {
      .tagline {
@@ -537,6 +550,11 @@ header#welcome-banner {
      padding: 5% 9%;
      background-color: #f9f9f9;
 }
+@media only screen and (max-width: 1000px) {
+     #learn-more .about-fundraiser {
+          padding: 12% 9%;
+     }
+}
 
 .progress-bar {
      display: block;
@@ -552,6 +570,13 @@ header#welcome-banner {
      flex: 0 0 33%;
      padding: 5% 2%;
 }
+@media only screen and (max-width: 1000px) {
+     #learn-more section.fundraiser-countdown {
+          background-color: #eeeeee;
+          flex: 0 0 33%;
+          padding: 13% 4%;
+     }
+}
 
 .countdown-timer {
      flex-direction: row;
@@ -563,10 +588,31 @@ header#welcome-banner {
           padding: 0 25px 80px 25px;
      }
 }
+@media only screen and (max-width: 500px) {
+     .countdown-timer {
+          flex-wrap: wrap;
+          justify-content: center;
+     }
+}
 
 .fundraiser-countdown .timer-item {
      font-size: 58px;
      font-weight: 500;
+}
+@media only screen and (max-width: 500px) {
+     .timer-item {
+          padding: 20px 30px;
+     }
+}
+@media only screen and (max-width: 400px) {
+     .timer-item {
+          padding: 15px 20px;
+     }
+}
+@media only screen and (max-width: 330px) {
+     .timer-item {
+          padding: 15px 10px;
+     }
 }
 .timer-item .timer-label {
      font-size: 20px;
