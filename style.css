@@ -80,7 +80,11 @@ p {
 section {
      padding: 7% 0;
 }
-
+@media only screen and (max-width: 1000px) {
+     section {
+          padding: 12% 0; 
+     }
+}
 /* Global Styles */
 .section-title {
      font-size: 34px;
@@ -156,6 +160,11 @@ section {
      background-color: rgba(0,0,0,0.8);
      transition: all 600ms ease-out;
 }
+
+.form-field {
+     position: relative;
+}
+
 
 /* Buttons */
 button.btn:focus {
@@ -459,24 +468,44 @@ header#welcome-banner {
      }
 }
 
-
 #welcome-banner .welcome-content-wrap {
      width: 65%;
      margin: 0 auto;
+}
+@media only screen and (max-width: 1000px) {
+     #welcome-banner .welcome-content-wrap {
+          width: 75%;     }
+}
+@media only screen and (max-width: 768px) {
+     #welcome-banner .welcome-content-wrap {
+          width: 80%;     }
+}
+@media only screen and (max-width: 600px) {
+     #welcome-banner .welcome-content-wrap {
+          width: 95%;
+     }
+}
+@media only screen and (max-width: 450px) {
+     #welcome-banner .welcome-content-wrap {
+          width: 98%;
+     }
 }
 
 .tagline {
      font-size: 30px;
      font-weight: 300;
      line-height: 42px;
-     margin: 0; 
-     padding: 0 0 30px 0;
+     margin: 0;
+     padding: 0 0 40px 0;
 }
 @media only screen and (max-width: 1300px) {
      .tagline {
           font-size: 26px; 
           line-height: 36px;
      }
+}
+.action-btns a {
+     margin: 0 10px;
 }
 @media only screen and (max-width: 1000px) {
      .tagline {
@@ -527,7 +556,12 @@ header#welcome-banner {
 .countdown-timer {
      flex-direction: row;
      justify-content: space-between;
-     padding: 0 20px 30px 20px;
+     padding: 0 20px 120px 20px;
+}
+@media only screen and (max-width: 1000px) {
+     .countdown-timer {
+          padding: 0 25px 80px 25px;
+     }
 }
 
 .fundraiser-countdown .timer-item {
@@ -624,12 +658,31 @@ a.social-icon:hover {
 }
 
 legend {
+     font-size: 1.15em;
+     padding-bottom: 5px;
      border-bottom: 1px solid rgba(0,0,0,.1);
 }
 
 label#transaction-fee {
      color: #3452ff;
      cursor: pointer;
+}
+
+.flex.name {
+     flex-direction: row;
+     justify-content: space-between;
+}
+
+.flex.name .form-field {
+     flex: 0 0 49%;
+}
+@media only screen and (max-width: 481px) {
+     .flex.name {
+          flex-direction: column;
+     }
+     .flex.name .form-field {
+          flex: 0 0 100%;
+     }
 }
 
 input[type="text"],
@@ -642,7 +695,30 @@ textarea {
      width: 100%;
      color: #333;
      min-height: 50px;
+     padding: 16px;
      border: 1px solid #ccc;
+     transition: all .3s ease-out;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+     outline: none;
+     border: 1px solid #999;
+}
+
+.is-required {
+     opacity: 1;
+     content: "*";
+     display: block;
+     position: absolute;
+     top: 1px;
+     right: 18px;
+     font-size: 16px;
+     line-height: 1.75;
+     color: #d32f2f;
+     transition: all .2s ease-in-out;
+     padding: 6px 0 0;
+     z-index: 1;
 }
 
 #submit-donation-btn {
