@@ -160,18 +160,18 @@
                          <div class="progress-bar"></div>
                          <div class="donation-items">
                               <div class="give-total">
-                                   <span id="dollar-sign">$</span>
-                                   <input type="text" id="donation-display">
+                                   <span class="dollar-sign">$</span>
+                                   <input type="text" id="donation-display" value="50.00">
                               </div>
                               <ul class="flex" id="donation-items">
-                                   <li>$5 - one pair of gloves</li>
-                                   <li>$10 - one drill learning software license</li>
-                                   <li>$25 - one custom color guard flag</li>
-                                   <li>$50 - drinks for one game or marching contest</li>
-                                   <li>$100 - rental of one equipment truck for contest</li>
-                                   <li>$200 - clinician visit</li>
-                                   <li>$500 - combined costs of a game and a contest</li>
-                                   <li>Give a Custom Amount</li>
+                                   <li id="5-usd">$5 - one pair of gloves</li>
+                                   <li id="10-usd">$10 - one drill learning software license</li id="10-usd">
+                                   <li id="25-usd">$25 - one custom color guard flag</li>
+                                   <li id="50-usd">$50 - drinks for one game or marching contest</li>
+                                   <li id="100-usd">$100 - rental of one equipment truck for contest</li>
+                                   <li id="200-usd">$200 - clinician visit</li>
+                                   <li id="500-usd">$500 - combined costs of a game and a contest</li>
+                                   <li id="custom-amt-usd">Give a Custom Amount</li>
                               </ul>
                          </div>
                          <p>
@@ -210,7 +210,11 @@
                                    <legend class="bold">Credit Card Info</legend>
                               </p>
                               <label>
-                                   This is a secure SSL encrypted payment.
+                                   <span id="padlock">
+                                        <img src="./img/padlock.png" alt="padlock icon">
+                                   </span> This is a
+                                   secure SSL
+                                   encrypted payment.
                               </label>
                               <div class="form-field">
                                    <input type="text" placeholder=" THIS NEEDS WORK ">
@@ -229,7 +233,12 @@
                                              fee of $3.30 for this donation.</label>
                                    </span>
                               </div>
-                              <p>Donation Total THING</p>
+                              <p>
+                                   <div class="give-total">
+                                        <span class="dollar-sign">Donation Total:</span>
+                                        <input type="text" id="donation-total">
+                                   </div>
+                              </p>
                               <input type="submit" class="btn btn-blue" value="Donate Now" id="submit-donation-btn">
                          </form>
                     </div>

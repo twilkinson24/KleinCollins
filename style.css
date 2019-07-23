@@ -447,7 +447,7 @@ main.main-terms ul {
 /* Klein Collins Page */
 header#welcome-banner { 
      background-color: #fff;
-     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./img/kchs_hidden.png');
+     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./img/KCHS - Background.png');
      background-size: cover;
      background-position: center center;
      background-repeat: no-repeat;
@@ -736,7 +736,7 @@ a.social-icon:hover {
 
 }
 
-span#dollar-sign {
+span.dollar-sign {
      position: absolute;
      top: 0;
      left: 0;
@@ -745,8 +745,6 @@ span#dollar-sign {
      color: #111;
      border: 1px solid #ccc;
 }
-
-
 
 ul#donation-items {
      flex-wrap: wrap;
@@ -804,6 +802,18 @@ label#transaction-fee {
      padding-left: 50px;
 }
 
+#donation-total {
+     display: block; 
+     color: #444;
+     height: 12px;
+     min-height: 12px;
+     max-height: 12px;
+     font-size: 17px;
+     font-weight: 300;
+     width: 225px;
+     padding: 15px;
+     padding-left: 160px;}
+
 input[type="text"],
 input[type="email"],
 textarea {
@@ -838,6 +848,16 @@ textarea:focus {
      transition: all .2s ease-in-out;
      padding: 6px 0 0;
      z-index: 1;
+}
+
+form #padlock img {
+     width: 100%;
+     max-width: 100%;
+}
+
+form #padlock {
+     max-width: 17px;
+     display: inline-block;
 }
 
 #submit-donation-btn {

@@ -152,4 +152,63 @@ jQuery(document).ready(function ($) {
 
           }());
      }
+
+     // Donation Form Section
+     const donationDisplay = document.getElementById('donation-display'),
+          donationTotal = document.getElementById('donation-total');
+
+     // Donation Options
+     const fiveBtn = document.getElementById('5-usd'),
+          tenBtn = document.getElementById('10-usd'),
+          twentyFiveBtn = document.getElementById('25-usd'),
+          fiftyBtn = document.getElementById('50-usd'),
+          oneHundredBtn = document.getElementById('100-usd'),
+          twoHundredBtn = document.getElementById('200-usd'),
+          fiveHundredBtn = document.getElementById('500-usd'),
+          customAmtBtn = document.getElementById('custom-amt-usd');
+
+     const donationBtns = [fiveBtn, tenBtn, twentyFiveBtn, fiftyBtn, oneHundredBtn, twoHundredBtn, fiveHundredBtn, customAmtBtn];
+
+     for (let i = 0; i < donationBtns.length; i++) {
+          donationBtns[i].addEventListener("click", function (e) {
+
+
+               switch (donationBtns[i]) {
+                    case fiveBtn:
+                         console.log('5');// code block
+                         break;
+                    case tenBtn:
+                         console.log('10!');// code block
+                         // code block
+                         break;
+                    case twentyFiveBtn:
+                         console.log('25!');// code block
+                         // code block
+                         break;
+                    case fiftyBtn:
+                         console.log('50!');// code block
+                         // code block
+                         break;
+                    case oneHundredBtn:
+                         console.log('100!');// code block
+                         // code block
+                         break;
+                    case twoHundredBtn:
+                         console.log('200!');// code block
+                         // code block
+                         break;
+                    case fiveHundredBtn:
+                         console.log('500!');// code block
+                         // code block
+                         break;
+                    case customAmtBtn:
+                         console.log('custom yo');// code block
+                         // code block
+                         break;
+                    default:
+                         console.log('default');// code block
+               }
+
+          });
+     }
 });
