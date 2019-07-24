@@ -463,7 +463,7 @@ main.main-terms ul {
 /* Klein Collins Page */
 header#welcome-banner { 
      background-color: #fff;
-     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./img/KCHS - Background.png');
+     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./img/kchs-background-min.jpg');
      background-size: cover;
      background-position: center center;
      background-repeat: no-repeat;

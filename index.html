@@ -5,7 +5,7 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <title>FFF Klein Collins High School Fall 2018 Fundraiser - Fundraise Genius</title>
+     <title>Klein Collins High School Fall 2018 Fundraiser - Fundraise Genius</title>
      <!-- Google Fonts -->
      <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:300,400&display=swap" rel="stylesheet">
      <!-- Font Awesome -->
@@ -14,7 +14,7 @@
      <!-- Main CSS -->
      <link rel="stylesheet" type="text/css" href="style.css">
      <!-- Icon for page tab -->
-     <link rel="shortcut icon" href="./img/FG-brain-fav.png" type="image/x-icon">
+     <link rel="shortcut icon" href="./img/FG-brain-fav-min.png" type="image/x-icon">
 </head>
 
 <body id="#klein-collins">
@@ -104,7 +104,7 @@
           <section class="message">
                <div class="container flex message-wrap">
                     <div class="rounded-img">
-                         <img src="./img/kchs_chris.png" class="rounded-img" alt="Director Chris Rugila">
+                         <img src="./img/kchs_chris-min.png" class="rounded-img" alt="Director Chris Rugila">
                     </div>
                     <div class="message-content">
                          <h2 class="section-title" style="font-size: 28px;
@@ -184,17 +184,18 @@
                          <p>
                               <legend class="bold">Student Designation</legend>
                          </p>
-                         <form action="" method="post" data-parsley-validate="">
+                         <form action="" method="post">
                               <div style="margin-bottom: 5px;">
                                    <label for="studentname">
                                         Enter the name of the student you would like to donate in support of (optional)
                                    </label>
                               </div>
                               <div class="form-field">
-                                   <input type="text" name="studentname" placeholder="Student name (first & last)">
+                                   <input type="text" name="studentname" placeholder="Student name (first & last)"
+                                        id="studentname">
                               </div>
                               <div class="form-field">
-                                   <textarea name="encouragement" id="" cols="30" rows="10"
+                                   <textarea name="encouragement" id="public-message" cols="30" rows="10"
                                         placeholder="Leave a public message of encouragement (optional)"></textarea>
                               </div>
                               <p>
@@ -222,7 +223,7 @@
                               </p>
                               <label>
                                    <span id="padlock">
-                                        <img src="./img/padlock.png" alt="padlock icon">
+                                        <img src="./img/padlock-min.png" alt="padlock icon">
                                    </span> This is a
                                    secure SSL
                                    encrypted payment.
@@ -261,20 +262,18 @@
      </main>
 
      <!-- Footer -->
-
-     <div class="text-center text-small text-gray">made by our friends at</div>
-     <div class="text-center footer-logo">
-          <img src="./img/FG-Logo-Grey-2.jpg" alt="Gray Fundraise Genius Logo">
-     </div>
-     <p class="text-center text-small text-gray">&copy; 2019 Fundraise Genius. All Rights Reserved.</p>
-
-
+     <footer>
+          <div class="text-center text-small text-gray">made by our friends at</div>
+          <div class="text-center footer-logo">
+               <img src="./img/FG-Logo-Grey-2.jpg" alt="Gray Fundraise Genius Logo">
+          </div>
+          <p class="text-center text-small text-gray">&copy; 2019 Fundraise Genius. All Rights Reserved.</p>
+     </footer>
      <!-- Back to top arrow -->
      <a class="back-to-top">
           <i class="fas fa-chevron-up"></i>
      </a>
      </div>
-
 
      <!-- jQuery -->
      <script src="https://code.jquery.com/jquery-3.4.0.min.js"
