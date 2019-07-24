@@ -93,7 +93,6 @@ jQuery(document).ready(function ($) {
           });
 
      if (!$("#klein-collins")[0]) {
-          console.log('yes');
           (function () {
                var _ = function (id) {
                     return document.getElementById(id);
@@ -171,6 +170,11 @@ jQuery(document).ready(function ($) {
 
      const donationBtns = [fiveBtn, tenBtn, twentyFiveBtn, fiftyBtn, oneHundredBtn, twoHundredBtn, fiveHundredBtn, customAmtBtn];
 
+     // adds commas to numbers in donation total inputs
+     function formatNumber(num) {
+          return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+     }
+
      function setTotal(total) {
           donationDisplay.value = total;
           donationTotal.value = total;
@@ -190,11 +194,10 @@ jQuery(document).ready(function ($) {
                     donationDisplay.value = getNumber;
                     donationTotal.value = donationDisplay.value;
                } else {
-                    donationDisplay.value += '.00';
+                    let getNumber = formatNumber(Number(donationDisplay.value).toFixed(2));
+                    donationDisplay.value = getNumber;
                     donationTotal.value = donationDisplay.value;
                }
-
-
           }
      });
 
@@ -211,39 +214,49 @@ jQuery(document).ready(function ($) {
           donationBtns[i].addEventListener("click", function (e) {
                switch (donationBtns[i]) {
                     case fiveBtn:
-                         console.log('5');// code block
                          setTotal('5.00');
                          break;
                     case tenBtn:
-                         console.log('10!');// code block
                          setTotal('10.00');
                          break;
                     case twentyFiveBtn:
-                         console.log('25!');// code block
                          setTotal('25.00');
                          break;
                     case fiftyBtn:
-                         console.log('50!');// code block
                          setTotal('50.00');
                          break;
                     case oneHundredBtn:
-                         console.log('100!');// code block
                          setTotal('100.00');
                          break;
                     case twoHundredBtn:
-                         console.log('200!');// code block
                          setTotal('200.00');
                          break;
                     case fiveHundredBtn:
-                         console.log('500!');// code block
                          setTotal('500.00');
                          break;
                     case customAmtBtn:
-                         console.log('custom yo');// code block
                          enterCustomAmt();
                          break;
                }
-
           });
      }
+
+     // Blue labels for form input fields
+     const formFields = document.querySelectorAll(".form-field label");
+
+     // console.log(formFields);
+     // console.log(formFields.length);
+
+     for (let i = 0; i < formFields.length; i++) {
+          //  console.log(formFields[i].nextSibling.nextSibling);
+          let inputForLabel = formFields[i].nextSibling.nextElementSibling,
+               inputLabel = inputForLabel.previousElementSibling;
+
+          formFields[i].nextSibling.nextElementSibling.addEventListener('keypress', function () {
+               inputLabel.classList.add('show-label');
+          });
+
+     }
+
+
 });

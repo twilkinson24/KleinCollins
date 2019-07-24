@@ -178,7 +178,7 @@
                               <legend class="bold">Student Designation</legend>
                          </p>
                          <form action="">
-                              <div class="form-field" style="margin-bottom: 5px;">
+                              <div style="margin-bottom: 5px;">
                                    <label for="studentname">
                                         Enter the name of the student you would like to donate in support of (optional)
                                    </label>
@@ -196,15 +196,19 @@
                               <div class="flex name">
                                    <div class="form-field">
                                         <div class="is-required">*</div>
-                                        <input type="text" name="firstname" placeholder="First Name" required>
+                                        <label for="first-name">First Name</label>
+                                        <input type="text" name="firstname" placeholder="First Name" id="first-name"
+                                             required>
                                    </div>
                                    <div class="form-field">
-                                        <input type="text" name="lastname" id="" placeholder="Last Name">
+                                        <label for="last-name">Last Name</label>
+                                        <input type="text" name="lastname" placeholder="Last Name" id="last-name">
                                    </div>
                               </div>
                               <div class="form-field">
                                    <div class="is-required">*</div>
-                                   <input type="email" name="email" placeholder="Email Address" required>
+                                   <label for="email">Email Address</label>
+                                   <input type="email" name="email" placeholder="Email Address" id="email" required>
                               </div>
                               <p>
                                    <legend class="bold">Credit Card Info</legend>
@@ -221,18 +225,17 @@
                               </div>
                               <div class="form-field">
                                    <div class="is-required">*</div>
-                                   <input type="text" placeholder="Cardholder Name" required>
+                                   <label for="cardholder-name">Cardholder Name</label>
+                                   <input type="text" placeholder="Cardholder Name" id="cardholder-name" required>
                               </div>
-                              <div class="form-field">
-                                   <input type="checkbox" name="transactionFee" value="transaction-fee" id="fee-check">
-                                   <span>
-                                        <label for="transactionFee" class="bold" id="transaction-fee">Check the box if
-                                             you
-                                             are willing to
-                                             cover the transaction
-                                             fee of $3.30 for this donation.</label>
-                                   </span>
-                              </div>
+                              <input type="checkbox" name="transactionFee" value="transaction-fee" id="fee-check">
+                              <span>
+                                   <label for="transactionFee" class="bold" id="transaction-fee">Check the box if
+                                        you
+                                        are willing to
+                                        cover the transaction
+                                        fee of $3.30 for this donation.</label>
+                              </span>
                               <p>
                                    <div class="give-total">
                                         <span class="dollar-sign">Donation Total:</span>
@@ -244,7 +247,6 @@
                     </div>
                </div>
           </section>
-
      </main>
 
 

@@ -807,6 +807,31 @@ label#transaction-fee {
      }
 }
 
+.form-field label {
+     position: absolute;
+     color: #757575;
+     font-size: 12px;
+     line-height: 13px;
+     font-weight: bold;
+     opacity: 0;
+     top: 0;
+     left: 13px;
+     right: 0;
+     padding: 6px 0 0;
+     z-index: 2;
+}
+
+.form-field label.show-label {
+     opacity: 1;
+     color: #1976d2;
+
+     transition: all .2s ease-out;
+}
+
+.show-label:focus {
+     color: #1976d2;
+}
+
 #donation-display {
      display: block; 
      color: #444;
