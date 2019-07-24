@@ -105,7 +105,7 @@ jQuery(document).ready(function ($) {
                     sec = _('timer-seconds'),
                     // You can have as many date/times as you want in an array
                     targets = [
-                         new Date('2019-09-25T16:30:00Z').getTime()],
+                         new Date('2019-07-30T16:30:00Z').getTime()],
                     i = 0;
 
                setInterval(function () {
@@ -147,7 +147,6 @@ jQuery(document).ready(function ($) {
                          min.innerHTML = '0';
                          sec.innerHTML = '0';
                     }
-
                }, 1000);
 
           }());
@@ -181,6 +180,23 @@ jQuery(document).ready(function ($) {
           donationDisplay.value = '';
           donationDisplay.focus();
      }
+
+     donationDisplay.addEventListener('blur', function () {
+          if (isNaN(donationDisplay.value)) {
+               donationDisplay.value = '50.00';
+          } else {
+               if (donationDisplay.value.includes('.')) {
+                    let getNumber = Number(donationDisplay.value).toFixed(2);
+                    donationDisplay.value = getNumber;
+                    donationTotal.value = donationDisplay.value;
+               } else {
+                    donationDisplay.value += '.00';
+                    donationTotal.value = donationDisplay.value;
+               }
+
+
+          }
+     });
 
      feeCheckBox.addEventListener("click", function () {
           feeCheck.click();
@@ -226,8 +242,6 @@ jQuery(document).ready(function ($) {
                          console.log('custom yo');// code block
                          enterCustomAmt();
                          break;
-                    default:
-                         console.log('default');// code block
                }
 
           });
