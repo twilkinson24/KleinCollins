@@ -160,6 +160,9 @@ section {
 .text-gray {
      color: #666;
 }
+.text-red {
+     color: red !important;
+}
 
 .text-center {
      text-align: center;
@@ -744,10 +747,10 @@ a.social-icon:hover {
 
 /* Donate Section */
 .donate-wrap {
-     width: 80%;
+     width: 65%;
      margin: 0 auto;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
      .donate-wrap {
           width: 100%;
      }
@@ -923,12 +926,25 @@ form #padlock {
 
 #card-no {
      border-right: none;
+     flex: 1 1 65%;
 }
 #exp-date {
      border-left: none;
-     flex: 0 0 20%;
+     border-right: none;
+     width: 115px;
 }
-
+#cvc {
+     border-left: none;
+     width: 100px;
+}
+@media only screen and (max-width: 600px){
+     #exp-date {
+          width: 100px;
+     }
+     #cvc {
+          width: 75px;
+     }
+}
 #card-no:focus {
      border: 1px solid #ccc;
      border-right: none;
@@ -936,17 +952,11 @@ form #padlock {
 #exp-date:focus {
      border: 1px solid #ccc;
      border-left: none;
+     border-right: none;
 }
-
-#cvc {
-     position: absolute;
-     right: 15px;
-     top: 50%;
-     transform: translateY(-50%);
-     font-family: "Roboto", Arial, Helvetica, sans-serif;
-     font-size: 16px;
-     font-weight: normal;
-     color: rgb(124, 124, 124);
+#cvc:focus {
+     border: 1px solid #ccc;
+     border-left: none;
 }
 
 #submit-donation-btn {

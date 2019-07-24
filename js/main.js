@@ -272,8 +272,37 @@ jQuery(document).ready(function ($) {
                     inputLabel.classList.add('show-label');
                }
           });
-
      }
 
+     var ccNo = $('#card-no');
+     // Payment validation using jQuery.payment
+     ccNo.payment('formatCardNumber');
+     $('#exp-date').payment('formatCardExpiry');
+     $('#cvc').payment('formatCardCVC');
+
+     ccNo.blur(function () {
+          if (ccNo.val().length > 0) {
+               if ($.payment.validateCardNumber(ccNo.val())) {
+                    ccNo.removeClass('text-red');
+               } else {
+                    ccNo.addClass('text-red');
+                    ccNo.focus();
+               }
+          }
+     });
+
+     ccNo.keyup(function () {
+          if (ccNo.val().length == 19) {
+               //  ccNo.removeClass('text-red');
+               console.log(ccNo.val());
+               console.log(ccNo.val().length);
+               if ($.payment.validateCardNumber(ccNo.val())) {
+                    ccNo.removeClass('text-red');
+               } else {
+                    ccNo.addClass('text-red');
+                    ccNo.focus();
+               }
+          }
+     });
 
 });
