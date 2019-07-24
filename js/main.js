@@ -141,7 +141,7 @@ jQuery(document).ready(function ($) {
                     sec = _('timer-seconds'),
                     // You can have as many date/times as you want in an array
                     targets = [
-                         new Date('2019-07-30T16:30:00Z').getTime()],
+                         new Date('2019-07-31T04:59:59Z').getTime()],
                     i = 0;
 
                setInterval(function () {
@@ -151,22 +151,18 @@ jQuery(document).ready(function ($) {
                     if (d > 0) {
                          // Get number of weeks until event
                          var weeks = Math.floor(d / 604800000);
-
                          // Remove weeks from d variable and work out days
                          d = d - (weeks * 604800000);
                          var days = Math.floor(d / 86400000);
                          day.innerHTML = days;
-
                          // Remove days from d variable and work out hours
                          d = d - (days * 86400000);
                          var hours = Math.floor(d / 3600000);
                          hour.innerHTML = hours;
-
                          // Remove hours from d variable and work out minutes
                          d = d - (hours * 3600000);
                          var minutes = Math.floor(d / 60000);
                          min.innerHTML = minutes;
-
                          // Remove minutes from d variable and work out seconds
                          d = d - (minutes * 60000);
                          var seconds = Math.floor(d / 1000);
