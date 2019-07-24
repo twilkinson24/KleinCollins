@@ -100,12 +100,12 @@ section {
 .container {
      padding: 0 90px;
      max-width: 1425px;
+     margin: 0 auto;
 }
 
 @media only screen and (max-width: 1000px) {
      .container {
           width: auto;
-          margin: 0 auto;
      }
 }
 @media only screen and (max-width: 768px) {
@@ -147,9 +147,18 @@ section {
      font-weight: bold;
 }
 
+.text-small {
+     font-size: 14px;
+     line-height: 15px;
+}
+
 .text-large {
      font-size: 46px;
      line-height: 48px;
+}
+
+.text-gray {
+     color: #666;
 }
 
 .text-center {
@@ -456,7 +465,7 @@ header#welcome-banner {
      background-position: center center;
      background-repeat: no-repeat;
      color: #fff;
-     padding: 14% 0;
+     padding: 12% 0 13% 0;
 }
 @media only screen and (max-width: 1300px) {
      header#welcome-banner { 
@@ -513,7 +522,7 @@ header#welcome-banner {
      font-weight: 300;
      line-height: 42px;
      margin: 0;
-     padding: 0 0 20px 0;
+     padding: 0 0 75px 0;
 }
 @media only screen and (max-width: 1300px) {
      .tagline {
@@ -637,7 +646,7 @@ header#welcome-banner {
 
 /* Video Section */
 #video {
-     max-width: 80%;
+     max-width: 85%;
      margin: 0 auto;
 }
 @media only screen and (max-width: 768px) {
@@ -824,7 +833,11 @@ label#transaction-fee {
 .form-field label.show-label {
      opacity: 1;
      color: #1976d2;
-
+     transition: all .2s ease-out;
+}
+.form-field label.blur {
+     opacity: 1;
+     color: #666;
      transition: all .2s ease-out;
 }
 
@@ -901,11 +914,51 @@ form #padlock {
      display: inline-block;
 }
 
+#card-info {
+     height: 50px;
+     margin: 0 0 10px 0;
+     box-sizing: border-box;
+     position: relative;
+}
+
+#card-no {
+     border-right: none;
+}
+#exp-date {
+     border-left: none;
+     flex: 0 0 20%;
+}
+
+#card-no:focus {
+     border: 1px solid #ccc;
+     border-right: none;
+}
+#exp-date:focus {
+     border: 1px solid #ccc;
+     border-left: none;
+}
+
+#cvc {
+     position: absolute;
+     right: 15px;
+     top: 50%;
+     transform: translateY(-50%);
+     font-family: "Roboto", Arial, Helvetica, sans-serif;
+     font-size: 16px;
+     font-weight: normal;
+     color: rgb(124, 124, 124);
+}
+
 #submit-donation-btn {
      width: 100%;
      padding: 16px 23px;
 }
 
+.footer-logo {
+     max-width: 247px;
+     padding: 10px 0 50px 0; 
+     margin: 0 auto;
+}
 
 /* back to top arrow button */
 .back-to-top {

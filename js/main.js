@@ -252,8 +252,25 @@ jQuery(document).ready(function ($) {
           let inputForLabel = formFields[i].nextSibling.nextElementSibling,
                inputLabel = inputForLabel.previousElementSibling;
 
-          formFields[i].nextSibling.nextElementSibling.addEventListener('keypress', function () {
+          inputForLabel.addEventListener('keypress', function () {
                inputLabel.classList.add('show-label');
+          });
+
+          inputForLabel.addEventListener('blur', function () {
+               if (inputForLabel.value == '') {
+                    inputLabel.classList.remove('show-label');
+                    inputLabel.classList.remove('blur');
+               } else {
+                    inputLabel.classList.add('blur');
+                    inputLabel.classList.remove('show-label');
+               }
+          });
+
+          inputForLabel.addEventListener('focus', function () {
+               if (inputForLabel.value != '') {
+                    inputLabel.classList.remove('blur');
+                    inputLabel.classList.add('show-label');
+               }
           });
 
      }
