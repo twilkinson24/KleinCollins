@@ -462,7 +462,7 @@ main.main-terms ul {
 
 /* Klein Collins Page */
 header#welcome-banner { 
-     background-color: #fff;
+     background-color: #444;
      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./img/kchs-background-min.jpg');
      background-size: cover;
      background-position: center center;
@@ -760,7 +760,29 @@ a.social-icon:hover {
     background: rgb(237, 237, 237);
     width: 155px;
     position: relative;
+}
+@media only screen and (max-width: 479px) {
+     .give-total {
+          width: 100%;
+          border: 1px solid #ccc;
+          border-bottom: none;
+     }
+}
 
+span#donation-total-box {
+     position: absolute;
+     top: 0;
+     left: 0;
+     background-color: rgb(237, 237, 237);
+     padding: 0px 15px;
+     color: #111;
+     border: 1px solid #ccc;
+}
+@media only screen and (max-width: 479px){
+     span#donation-total-box {
+          position: static;
+          border: none;
+     }
 }
 
 span.dollar-sign {
@@ -869,7 +891,15 @@ label#transaction-fee {
      font-weight: 300;
      width: 245px;
      padding: 15px;
-     padding-left: 160px;}
+     padding-left: 160px;
+}
+@media only screen and (max-width: 479px) {
+     #donation-total {
+          width: 100%;
+          padding-left: 15px;
+          border: 1px solid #ccc;
+     }
+}
 
 input[type="text"],
 input[type="email"],
@@ -923,7 +953,15 @@ form #padlock {
      box-sizing: border-box;
      position: relative;
 }
-
+@media only screen and (max-width: 710px) {
+     #card-info {
+          flex-wrap: wrap;
+     }
+     #cardholder-name {
+          margin-top: 90px;
+     }
+     
+}
 #card-no {
      border-right: none;
      flex: 1 1 65%;
@@ -931,18 +969,23 @@ form #padlock {
 #exp-date {
      border-left: none;
      border-right: none;
-     width: 115px;
+     flex: 0 1 20%;
 }
 #cvc {
      border-left: none;
-     width: 100px;
+     flex: 0 1 10%;
 }
-@media only screen and (max-width: 600px){
+
+@media only screen and (max-width: 710px) {
+     #card-no {
+          border-right: 1px solid #999;
+     }
      #exp-date {
-          width: 100px;
+          border-left: 1px solid #999;
+          flex: 1 0 50%;
      }
      #cvc {
-          width: 75px;
+          flex: 0 0 30%;
      }
 }
 #card-no:focus {
