@@ -762,7 +762,7 @@ a.social-icon:hover {
     position: relative;
 }
 @media only screen and (max-width: 479px) {
-     .give-total {
+     .give-total.total {
           width: 100%;
           border: 1px solid #ccc;
           border-bottom: none;
