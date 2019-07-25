@@ -825,9 +825,11 @@ ul#donation-items {
 }
 
 legend {
-     font-size: 1.15em;
-     padding-bottom: 5px;
+     font-size: 1.15rem;
+     font-weight: 700;
+     padding: 0 0 5px 0;
      border-bottom: 1px solid rgba(0,0,0,.1);
+     width: 100%;
 }
 
 label#transaction-fee {
@@ -964,6 +966,7 @@ form #padlock {
      margin: 0 0 10px 0;
      box-sizing: border-box;
      position: relative;
+     width: 100%;
 }
 @media only screen and (max-width: 710px) {
      #card-info {
@@ -974,30 +977,61 @@ form #padlock {
      }
      
 }
+#cc-no-wrap {
+     flex: 1 0 60%;
+}
+#cc-exp-wrap {
+     flex: 0 0 20%;
+}
+#cc-cvc-wrap {
+     flex: 0 0 10%;
+}
+@media only screen and (max-width: 710px) {
+     #cc-no-wrap {
+          flex: 0 0 100%;
+     }
+     #cc-exp-wrap {
+          flex: 1 0 65%;
+     }
+     #cc-cvc-wrap {
+          flex: 1 1 35%;
+     }
+}
+
 #card-no {
      border-right: none;
-     flex: 1 1 65%;
+     flex: 1 1 64%;
 }
+
 #exp-date {
      border-left: none;
      border-right: none;
-     flex: 0 1 20%;
+     padding: 16px 5px;
+     flex: 0 1 23%;
 }
 #cvc {
      border-left: none;
-     flex: 0 1 10%;
+     padding: 16px 5px;
+     flex: 0 1 13%;
 }
 
 @media only screen and (max-width: 710px) {
      #card-no {
           border-right: 1px solid #999;
+          border-left: 1px solid #999;
+
      }
      #exp-date {
           border-left: 1px solid #999;
-          flex: 1 0 50%;
+          border-right: 1px solid #999;
+          flex: 1 1 50%;
+          padding: 0 0 0 16px;
      }
      #cvc {
-          flex: 0 0 30%;
+          flex: 1 1 40%;
+          border-right: 1px solid #999;
+          height: 50px;
+          padding: 16px;
      }
 }
 #card-no:focus {
@@ -1009,10 +1043,24 @@ form #padlock {
      border-left: none;
      border-right: none;
 }
+@media only screen and (max-width: 710px) {
+     #exp-date:focus {
+          border-left: 1px solid #ccc;
+          border-right: 1px solid #ccc;
+     }
+}
 #cvc:focus {
      border: 1px solid #ccc;
      border-left: none;
 }
+@media only screen and (max-width: 710px) {
+     #cvc:focus {
+          border-right: 1px solid #ccc;
+     }
+}
+
+
+
 
 #submit-donation-btn {
      width: 100%;
