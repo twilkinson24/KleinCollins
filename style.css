@@ -638,8 +638,8 @@ header#welcome-banner {
 }
 @media only screen and (max-width: 350px) {
      .timer-item p {
-          font-size: 38px;
-          padding: 10px 3px;
+          font-size: 34px;
+          padding: 10px 6px;
           font-weight: bold;
      }
 }
