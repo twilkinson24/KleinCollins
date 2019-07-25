@@ -617,7 +617,6 @@ header#welcome-banner {
 }
 @media only screen and (max-width: 500px) {
      .countdown-timer {
-          flex-wrap: wrap;
           justify-content: center;
      }
 }
@@ -628,17 +627,14 @@ header#welcome-banner {
 }
 @media only screen and (max-width: 500px) {
      .timer-item p {
-          padding: 20px 30px;
+          font-size: 48px;
+          padding: 10px 15px;
      }
 }
-@media only screen and (max-width: 400px) {
-    .timer-item p {
-          padding: 15px 20px;
-     }
-}
-@media only screen and (max-width: 330px) {
+@media only screen and (max-width: 350px) {
      .timer-item p {
-          padding: 15px 10px;
+          font-size: 42px;
+          padding: 10px 8px;
      }
 }
 .timer-item .timer-label {
