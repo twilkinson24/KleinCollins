@@ -185,7 +185,8 @@
                          <p>
                               <legend class="bold">Student Designation</legend>
                          </p>
-                         <form action="" method="post">
+                         <form action="" method="post" id="donate-form">
+                              <!-- Form Submission is currently prevented with e.preventDefault() on lines 3-7 of main.js -->
                               <div style="margin-bottom: 5px;">
                                    <label for="studentname">
                                         Enter the name of the student you would like to donate in support of (optional)
@@ -232,13 +233,16 @@
                               <div class="form-field">
                                    <div class="flex" id="card-info">
                                         <div id="cc-no-wrap">
-                                             <input type="text" placeholder="Card Number" id="card-no">
+                                             <input type="text" placeholder="Card Number" id="card-no" required>
                                         </div>
                                         <div id="cc-exp-wrap">
-                                             <input type="text" id="exp-date" placeholder="MM/YYYY">
+                                             <input type="text" id="exp-date" placeholder="MM/YYYY" required>
                                         </div>
                                         <div id="cc-cvc-wrap">
-                                             <input type="text" id="cvc" placeholder="CVC">
+                                             <input type="text" id="cvc" placeholder="CVC" required>
+                                        </div>
+                                        <div class="error-msg">
+                                             <!-- JS error messages -->
                                         </div>
                                    </div>
                               </div>

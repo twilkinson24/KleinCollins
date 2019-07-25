@@ -1,4 +1,11 @@
 jQuery(document).ready(function ($) {
+     // PREVENT DONATE FORM SUBMISSION
+     /* These lines (4 - 7) are preventing the form to submit for payment */
+     $('#donate-form').submit(function (e) {
+          console.log('Lines 3 - 7 of main.js are preventing form submission');
+          e.preventDefault();
+     });
+
      /** Smooth Scrolling */
      // Select all links with hashes
      $('a[href*="#"]')
@@ -154,10 +161,16 @@ jQuery(document).ready(function ($) {
                          // Remove weeks from d variable and work out days
                          d = d - (weeks * 604800000);
                          var days = Math.floor(d / 86400000);
+                         if (days < 10) {
+                              days = '0' + days;
+                         }
                          day.innerHTML = days;
                          // Remove days from d variable and work out hours
                          d = d - (days * 86400000);
                          var hours = Math.floor(d / 3600000);
+                         if (hours < 10) {
+                              hours = '0' + hours;
+                         }
                          hour.innerHTML = hours;
                          // Remove hours from d variable and work out minutes
                          d = d - (hours * 3600000);
@@ -306,7 +319,8 @@ jQuery(document).ready(function ($) {
                }
           });
      }
-
+     /* Credit Card Validation */
+     var isValid = false;
      var ccNo = $('#card-no');
      // Payment validation using jQuery.payment
      ccNo.payment('formatCardNumber');
@@ -338,4 +352,24 @@ jQuery(document).ready(function ($) {
           }
      });
 
+     var donateForm = document.getElementById('donate-form');
+
+     donateForm.submit(function (e) {
+          if ($.payment.validateCardNumber(ccNo.val())) {
+               console.log('valid!');
+               // Allow form to submit
+               e.preventDefault();
+          } else {
+               ccNo.addClass('text-red');
+               ccNo.focus();
+               console.log('not valid!');
+               e.preventDefault();
+          }
+          if (document.getElementById('card-no').value.length < 18) {
+               ccNo.addClass('text-red');
+               ccNo.focus();
+               console.log('too short!');
+               e.preventDefault();
+          }
+     });
 });

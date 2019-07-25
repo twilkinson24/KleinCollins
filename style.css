@@ -193,6 +193,11 @@ button.btn:focus {
      cursor: pointer;
      font-weight: bold;
 }
+@media only screen and (max-width: 768px) {
+     .btn {
+          letter-spacing: normal;
+     }
+}
 
 .btn-gray-border {
      background-color: transparent;
@@ -829,6 +834,7 @@ legend {
 }
 
 label#transaction-fee {
+     letter-spacing: -1px;
      color: #3452ff;
      cursor: pointer;
 }
@@ -971,8 +977,12 @@ form #padlock {
      #cardholder-name {
           margin-top: 90px;
      }
-     
 }
+
+#card-info .error-msg {
+     display: none;
+}
+
 #cc-no-wrap {
      flex: 1 0 60%;
 }
@@ -1055,12 +1065,10 @@ form #padlock {
      }
 }
 
-
-
-
-#submit-donation-btn {
+input[type="submit"]#submit-donation-btn {
+     font-size: 18px;
      width: 100%;
-     padding: 16px 23px;
+     padding: 18px 23px;
 }
 
 .footer-logo {
