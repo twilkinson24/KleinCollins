@@ -624,7 +624,7 @@ header#welcome-banner {
 
 .fundraiser-countdown .timer-item p {
      font-size: 58px;
-     font-weight: 500;
+     font-weight: 400;
 }
 @media only screen and (max-width: 500px) {
      .timer-item p {
@@ -643,7 +643,7 @@ header#welcome-banner {
 }
 .timer-item .timer-label {
      font-size: 20px;
-     font-weight: normal;
+     font-weight: 300;
      color: rgb(145, 145, 145);
 }
 
@@ -704,7 +704,7 @@ section.message {
           width: 100%;
      }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 365px) {
      .social-icons {
           flex-wrap: wrap;
      }
@@ -721,9 +721,10 @@ section.message {
      margin: 0 5px;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
      .social-icons a.social-icon {
           margin-bottom: 10px;
+          width: 60px;
      }
 }
 
@@ -733,6 +734,16 @@ section.message {
 @media only screen and (max-width: 1000px) {
      .social-icon img {
           width: 70%;
+     }  
+}
+@media only screen and (max-width: 768px) {
+     .social-icon img {
+          width: 75%;
+     }  
+}
+@media only screen and (max-width: 450px) {
+     .social-icon img {
+          width: 83%;
      }  
 }
 
@@ -810,6 +821,7 @@ ul#donation-items {
      font-weight: 500;
      padding: 6px 15px;
      margin: 0 5px 5px 0;
+     cursor: pointer;
 }
 
 legend {
