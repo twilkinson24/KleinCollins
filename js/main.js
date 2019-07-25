@@ -175,10 +175,16 @@ jQuery(document).ready(function ($) {
                          // Remove hours from d variable and work out minutes
                          d = d - (hours * 3600000);
                          var minutes = Math.floor(d / 60000);
+                         if (minutes < 10) {
+                              minutes = '0' + minutes;
+                         }
                          min.innerHTML = minutes;
                          // Remove minutes from d variable and work out seconds
                          d = d - (minutes * 60000);
                          var seconds = Math.floor(d / 1000);
+                         if (seconds < 10) {
+                              seconds = '0' + seconds;
+                         }
                          sec.innerHTML = seconds;
                     }
 
