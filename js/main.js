@@ -259,7 +259,10 @@ jQuery(document).ready(function ($) {
                donationTotal.value = parseFloat(donationTotal.value) + 3.3;
                donationTotal.value = parseFloat(donationTotal.value).toFixed(2);
                donationDisplay.value = donationTotal.value;
-
+          } else {
+               donationTotal.value = parseFloat(donationTotal.value) - 3.3;
+               donationTotal.value = parseFloat(donationTotal.value).toFixed(2);
+               donationDisplay.value = donationTotal.value;
           }
      });
 
