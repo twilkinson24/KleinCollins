@@ -195,7 +195,7 @@ button.btn:focus {
 }
 @media only screen and (max-width: 768px) {
      .btn {
-          letter-spacing: normal;
+          letter-spacing: 0;
      }
 }
 
@@ -628,18 +628,18 @@ header#welcome-banner {
 
 .fundraiser-countdown .timer-item p {
      font-size: 58px;
-     font-weight: 400;
+     font-weight: 300;
 }
 @media only screen and (max-width: 500px) {
-     .timer-item p {
+     .fundraiser-countdown .timer-item p {
           font-size: 52px;
           padding: 10px 15px;
      }
 }
 @media only screen and (max-width: 350px) {
-     .timer-item p {
+     .fundraiser-countdown .timer-item p {
           font-size: 48px;
-          padding: 10px 4px;
+          padding: 10px 5px;
      }
 }
 .timer-item .timer-label {
@@ -828,13 +828,14 @@ ul#donation-items {
 legend {
      font-size: 1.15rem;
      font-weight: 700;
+     letter-spacing: 0px;
      padding: 0 0 5px 0;
      border-bottom: 1px solid rgba(0,0,0,.1);
      width: 100%;
 }
 
 label#transaction-fee {
-     letter-spacing: -1px;
+     letter-spacing: 0px;
      color: #3452ff;
      cursor: pointer;
 }
