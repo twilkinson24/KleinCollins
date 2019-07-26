@@ -253,6 +253,16 @@ jQuery(document).ready(function ($) {
           }
      });
 
+     // Checkbox to cover $3.30 fee
+     feeCheck.addEventListener('click', function () {
+          if (feeCheck.checked) {
+               donationTotal.value = parseFloat(donationTotal.value) + 3.3;
+               donationTotal.value = parseFloat(donationTotal.value).toFixed(2);
+               donationDisplay.value = donationTotal.value;
+
+          }
+     });
+
      feeCheckBox.addEventListener("click", function () {
           feeCheck.click();
      });
@@ -264,6 +274,9 @@ jQuery(document).ready(function ($) {
 
      for (let i = 0; i < donationBtns.length; i++) {
           donationBtns[i].addEventListener("click", function (e) {
+               if (feeCheck.checked) {
+                    feeCheck.click();
+               }
                switch (donationBtns[i]) {
                     case fiveBtn:
                          setTotal('5.00');
