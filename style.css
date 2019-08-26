@@ -192,6 +192,7 @@ button.btn:focus {
      color: #fff !important;
      cursor: pointer;
      font-weight: bold;
+     letter-spacing: 0;
 }
 @media only screen and (max-width: 768px) {
      .btn {
