@@ -1066,11 +1066,11 @@ form #padlock {
      }
 }
 
-input[type="submit"]#submit-donation-btn {
+button[type="submit"]#submit-donation-btn {
      display: block;
      font-size: 18px;
      width: 90%;
-     margin: 0 auto;
+     margin: 5px auto;
      padding: 24px 10px;
 }
 
