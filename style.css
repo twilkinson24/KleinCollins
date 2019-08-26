@@ -1067,8 +1067,11 @@ form #padlock {
 }
 
 input[type="submit"]#submit-donation-btn {
+     display: block;
      font-size: 18px;
-     width: 100%;
+     width: 90%;
+     margin: 0 auto;
+     padding: 24px 10px;
 }
 
 .footer-logo {
