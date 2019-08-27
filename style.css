@@ -191,6 +191,7 @@ button.btn:focus {
      font-family: "Roboto", Arial, Helvetica, sans-serif;
      color: #fff !important;
      cursor: pointer;
+     letter-spacing: normal;
      font-weight: bold;
 }
 @media only screen and (max-width: 768px) {
